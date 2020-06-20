@@ -1,7 +1,7 @@
 import utils from '../../helpers/utils';
 
 const signMeIn = () => {
-  console.warm('Yeah I\'ll sign you in, just give me a minute!');
+  console.warn('Yeah I\'ll sign you in, just give me a minute!');
 };
 
 const loginButton = () => {
