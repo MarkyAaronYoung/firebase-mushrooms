@@ -8,20 +8,24 @@ const authDiv = $('#auth');
 const forestDiv = $('#forest');
 const hutDiv = $('#hut');
 const logoutButton = $('#navbar-logout-button');
+const singleMycoDiv = $('#single-myco');
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       authDiv.addClass('hide');
       forestDiv.removeClass('hide');
-      logoutButton.removeClass('hide');
       hutDiv.removeClass('hide');
-      mycologistList.buildHut();
+      singleMycoDiv.removeClass('hide');
+      logoutButton.removeClass('hide');
 
       mushroomList.buildForest();
+      mycologistList.buildHut();
     } else {
       authDiv.removeClass('hide');
       forestDiv.addClass('hide');
+      hutDiv.addClass('hide');
+      singleMycoDiv.addClass('hide');
       logoutButton.addClass('hide');
     }
   });
