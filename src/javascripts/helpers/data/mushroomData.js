@@ -1,6 +1,6 @@
 import axios from 'axios';
 import apiKeys from '../apiKeys.json';
-import mushroomList from '../../components/mushroomList/mushroomList';
+// import mushroomList from '../../components/mushroomList/mushroomList';
 
 const baseUrl = apiKeys.firebaseConfig.databaseURL;
 
